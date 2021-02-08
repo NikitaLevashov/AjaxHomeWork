@@ -7,23 +7,35 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ListShopsWEB.Models;
 using ListShopsDAL.Mapping;
+using ListShopsDAL.Repository;
+using ListShopsBLL.ModelsBLL;
+using ListShopsBLL.interfaces;
 
 namespace ListShopsWEB.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IGetShopsRepository _repository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IGetShopsRepository repository)
         {
-            _logger = logger;
+            _repository = repository;
         }
 
-        public IActionResult Index()
+        public IActionResult ListShops()
         {
-            return View();
-        }
+            var shopsList = _repository.ShopsBLL.ToList();
+            ViewBag.Shops = shopsList;
 
+            return PartialView(shopsList);
+        }
+        public IActionResult ShowInformationOfShop(int positionShopOfTableInView)
+        {
+            var shopsList = _repository.ShopsBLL.ToList();
+            ViewBag.Shops = shopsList[positionShopOfTableInView];
+
+            return PartialView(shopsList[positionShopOfTableInView]);
+        }
         public IActionResult Privacy()
         {
             return View();

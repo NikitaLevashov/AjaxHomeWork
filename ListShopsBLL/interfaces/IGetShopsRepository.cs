@@ -8,6 +8,6 @@ namespace ListShopsBLL.interfaces
 {
     public interface IGetShopsRepository
     {
-        IQueryable<ShopBLL> ShopsBLL { get; }
+        public IQueryable<ShopBLL> ShopsBLL { get; }
     }
 }

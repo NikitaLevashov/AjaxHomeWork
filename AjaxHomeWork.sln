@@ -3,11 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListShopsWEB", "ListShopsWEB\ListShopsWEB.csproj", "{2801DDC5-09F9-42DE-A45A-9A8DFEF19513}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListShopsWEB", "ListShopsWEB\ListShopsWEB.csproj", "{2801DDC5-09F9-42DE-A45A-9A8DFEF19513}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AC043D3C-B8C5-41AA-B4D3-A8DA2F3AE613} = {AC043D3C-B8C5-41AA-B4D3-A8DA2F3AE613}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListShopsDAL", "ListShopsDAL\ListShopsDAL.csproj", "{BF9F342F-A173-4163-9C39-746EB6770E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListShopsDAL", "ListShopsDAL\ListShopsDAL.csproj", "{BF9F342F-A173-4163-9C39-746EB6770E6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListShopsBLL", "ListShopsBLL\ListShopsBLL.csproj", "{AC043D3C-B8C5-41AA-B4D3-A8DA2F3AE613}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListShopsBLL", "ListShopsBLL\ListShopsBLL.csproj", "{AC043D3C-B8C5-41AA-B4D3-A8DA2F3AE613}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
