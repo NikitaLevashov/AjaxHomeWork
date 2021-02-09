@@ -29,7 +29,7 @@ namespace ListShopsWEB
         {
             services.AddDbContext<ShopsDBContext>();
             services.AddControllersWithViews();
-            services.AddTransient<IGetShopsRepository, EFShopsRepository>();
+            services.AddTransient<IGetShopsRepository, FakeShopsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

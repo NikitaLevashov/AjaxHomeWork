@@ -10,12 +10,12 @@ namespace ListShopsDAL.Mapping
 {
     public static class ClassMapping
     {
-        public static IEnumerable<Shop> MapToIEnumerableBLLShop(IEnumerable<Shop> shopsDAL)
+        public static IEnumerable<ShopBLL> MapToIEnumerableBLLShop(IEnumerable<ShopDAL> shopsDAL)
         {
-            var configMapper = new MapperConfiguration(cfg => cfg.CreateMap<Shop, Shop>());
+            var configMapper = new MapperConfiguration(cfg => cfg.CreateMap<ShopDAL, ShopBLL>());
             var mapper = new Mapper(configMapper);
 
-            var shopsBLL = mapper.Map<IEnumerable<Shop>, IEnumerable<Shop>>(shopsDAL);
+            var shopsBLL = mapper.Map<IEnumerable<ShopDAL>, IEnumerable<ShopBLL>>(shopsDAL);
 
             return shopsBLL;
         }

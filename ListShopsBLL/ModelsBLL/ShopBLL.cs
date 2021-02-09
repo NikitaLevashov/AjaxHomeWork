@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ListShopsBLL.ModelsBLL
 {
-    public class Shop
+    public class ShopBLL
     {
         public int Id { get; set; }
         public string Name { get; set; }

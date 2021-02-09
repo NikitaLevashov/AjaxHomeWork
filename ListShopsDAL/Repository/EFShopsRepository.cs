@@ -18,7 +18,7 @@ namespace ListShopsDAL.Repository
         {
             _context = shopDbContext;
         }
-        public IEnumerable<Shop> ShopsDAL => _context.Shops;
-        public IEnumerable<Shop> ShopsBLL => ClassMapping.MapToIEnumerableBLLShop(ShopsDAL);
+        public IEnumerable<ShopDAL> ShopsDAL => _context.Shops;
+        public IEnumerable<ShopBLL> ShopsBLL => ClassMapping.MapToIEnumerableBLLShop(ShopsDAL);
     }
 }
