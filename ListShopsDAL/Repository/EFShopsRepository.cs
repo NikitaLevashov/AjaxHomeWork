@@ -18,8 +18,7 @@ namespace ListShopsDAL.Repository
         {
             _context = shopDbContext;
         }
-        public IQueryable<Shop> Shops => _context.Shops;
-        IQueryable<ShopBLL> IGetShopsRepository.ShopsBLL => ClassMapping.MapToIQueryableBLLShop(Shops);
-
+        public IEnumerable<Shop> ShopsDAL => _context.Shops;
+        public IEnumerable<Shop> ShopsBLL => ClassMapping.MapToIEnumerableBLLShop(ShopsDAL);
     }
 }

@@ -19,7 +19,7 @@ namespace ListShopsWEB.Controllers
 
         public HomeController(IGetShopsRepository repository)
         {
-            _repository = repository;
+            _repository = repository ?? throw new ArgumentNullException(); ;
         }
 
         public IActionResult ListShops()
